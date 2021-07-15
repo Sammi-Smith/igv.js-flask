@@ -10,7 +10,7 @@ function initBrowser() {
       locus: "chrI",
       tracks: [
                   {
-                      name: "ROI: Annotations",
+                      name: "ROI: Bed Format",
                       type: 'annotation',
                       displayMode: "EXPANDED",
                       height: 50,

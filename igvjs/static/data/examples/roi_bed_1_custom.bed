@@ -1,0 +1,3 @@
+track name="ItemRGBDemo" description="Item RGB demonstration" itemRgb="On" useScore=1
+chrI  100218  117218  ROI1  1  +  105218  115218  255,0,0
+chrI  206218  222218  ROI2  1000  -  209218  220218  0,0,255

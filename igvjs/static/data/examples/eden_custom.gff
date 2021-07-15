@@ -1,0 +1,25 @@
+##gff-version 3
+##sequence-region chrI	1	1497228
+chrI	.	gene	1000	9000	.	t	.	ID=gene00001;Name=KI
+chrI	.	TF_binding_site	1000	1012	.	t	.	Parent=gene00001
+chrI	.	mRNA	1050	9000	.	t	.	ID=mRNA00001;Parent=gene00001
+chrI	.	mRNA	1050	9000	.	t	.	ID=mRNA00002;Parent=gene00001
+chrI	.	mRNA	1300	9000	.	t	.	ID=mRNA00003;Parent=gene00001
+chrI	.	exon	1300	1500	.	t	.	Parent=mRNA00003
+chrI	.	exon	1050	1500	.	t	.	Parent=mRNA00001,mRNA00002
+chrI	.	exon	3000	3902	.	t	.	Parent=mRNA00001,mRNA00003
+chrI	.	exon	5000	5500	.	t	.	Parent=mRNA00001,mRNA00002,mRNA00003
+chrI	.	exon	7000	9000	.	t	.	Parent=mRNA00001,mRNA00002,mRNA00003
+chrI	.	CDS	1201	1500	.	t	0	ID=cds00001;Parent=mRNA00001
+chrI	.	CDS	3000	3902	.	t	0	ID=cds00001;Parent=mRNA00001
+chrI	.	CDS	5000	5500	.	t	0	ID=cds00001;Parent=mRNA00001
+chrI	.	CDS	7000	7600	.	t	0	ID=cds00001;Parent=mRNA00001
+chrI	.	CDS	1201	1500	.	t	0	ID=cds00002;Parent=mRNA00002
+chrI	.	CDS	5000	5500	.	t	0	ID=cds00002;Parent=mRNA00002
+chrI	.	CDS	7000	7600	.	t	0	ID=cds00002;Parent=mRNA00002
+chrI	.	CDS	3301	3902	.	t	0	ID=cds00003;Parent=mRNA00003
+chrI	.	CDS	5000	5500	.	t	1	ID=cds00003;Parent=mRNA00003
+chrI	.	CDS	7000	7600	.	t	1	ID=cds00003;Parent=mRNA00003
+chrI	.	CDS	3391	3902	.	t	0	ID=cds00004;Parent=mRNA00003
+chrI	.	CDS	5000	5500	.	t	1	ID=cds00004;Parent=mRNA00003
+chrI	.	CDS	7000	7600	.	t	1	ID=cds00004;Parent=mRNA00003

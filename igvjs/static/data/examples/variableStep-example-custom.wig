@@ -1,0 +1,15 @@
+browser position chrI:50218-150218
+browser hide all
+#	150 base wide bar graph at arbitrarily spaced positions,
+#	threshold line drawn at y=11.76
+#	autoScale off viewing range set to [0:25]
+#	priority = 10 positions this as the first graph
+#	Note, one-relative coordinate system in use for this format
+track type=wiggle_0 name="variableStep" description="variableStep format" visibility=full autoScale=off viewLimits=0.0:25.0 color=50,150,255 yLineMark=11.76 yLineOnOff=on priority=10
+variableStep chrom=chrI span=150
+60218	10.0
+80218	12.5
+100218	15.0
+110218	17.5
+120218	20.0
+

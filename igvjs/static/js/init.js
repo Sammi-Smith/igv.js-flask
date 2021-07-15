@@ -19,7 +19,7 @@ function initBrowser() {
                   },
 
                   {
-                      name: 'Prefilter Alignments: BAM',
+                      name: 'Prefilter Alignments: BAM Format',
                       url: '/static/data/examples/MATalpha_R1.bam',
                       indexed: false,
                       format: 'bam',
@@ -29,7 +29,7 @@ function initBrowser() {
                   },
 
                   {
-                      name: "CNN-Align: Activations",
+                      name: "CNN-Align Activations: WIG Format",
                       type: "wig",
                       displayMode: "EXPANDED",
                       height: 150,
@@ -39,36 +39,14 @@ function initBrowser() {
                     ]
                   },
 
-                  {
-                      name: "Key Indicators: (Hardcoded)",
-                      type: "annotation",
-                      displayMode: "EXPANDED",
-                      height: 150,
-                      features: [
-                        {
-                            "chr": "chrI",
-                            "start": 100218,
-                            "end": 108218,
-                            "name": 'Long KI: Type A',
-                            "color": 'rgb(100,100,0)'
-                        },
-                        {
-                            "chr": "chrI",
-                            "start": 208218,
-                            "end": 210218,
-                            "name": 'Short KI: Type C',
-                            "color": "red"
-                        }
-                      ]
-                  },
 
                   {
-                      name: 'Key Indicators: (GFF3 Format)',
-                      url: '/static/data/examples/eden_custom.gff',
+                      name: 'Key Indicators: GFF3 Format',
+                      url: '/static/data/examples/eden_custom.gff3',
                       type: 'annotation',
                       displayMode: 'EXPANDED',
                       height: 150,
-                      color: 'rgb(100,100,0)'
+
                   },
               ],
 // Define global (across all tracks) "region of interest" set

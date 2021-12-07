@@ -19,6 +19,8 @@ function initBrowser() {
   //all below paths are relative to base_folder/sample_id
   var prefilter_alignments = '/alignments/engineered_align.bam';
   var url_prefilter_alignments = `${base_folder}${sample_id}${prefilter_alignments}`;
+  var prefilter_alignments_index = '/alignments/engineered_align.bam.bai';
+  var url_prefilter_alignments_index = `${base_folder}${sample_id}${prefilter_alignments_index}`;
 
   var ki_annotations = '/annotations/key-indicators.gff';
   var url_ki_annotations = `${base_folder}${sample_id}${ki_annotations}`;
@@ -40,7 +42,7 @@ function initBrowser() {
                   {
                       name: 'Prefilter: Alignments/coverage of all positive reads to assembled genome',
                       url: url_prefilter_alignments,
-                      indexed: false, //will be adding an index file
+                      indexURL: url_prefilter_alignments_index,
                       type: 'alignment',
                       //visibilityWindow: 300000,
                       height: 150

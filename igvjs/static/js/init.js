@@ -20,7 +20,10 @@ function initBrowser() {
   var prefilter_alignments = '/alignments/engineered_align.bam';
   var url_prefilter_alignments = `${base_folder}${sample_id}${prefilter_alignments}`;
 
-  console.log(fastaURL_preprocessing_genome_assembly);
+  var ki_annotations = '/annotations/key-indicators.gff';
+  var url_ki_annotations = `${base_folder}${sample_id}${ki_annotations}`;
+
+  console.log(url_ki_annotations);
   
 
   div = document.getElementById("myDiv");
@@ -38,11 +41,20 @@ function initBrowser() {
                       name: 'Prefilter: Alignments/coverage of all positive reads to assembled genome',
                       url: url_prefilter_alignments,
                       indexed: false, //will be adding an index file
-                      format: 'bam',
                       type: 'alignment',
-                      visibilityWindow: 300000,
+                      //visibilityWindow: 300000,
                       height: 150
                   },
+
+                  {
+                      name: 'KI annotation mode: Key indicator location annotation',
+                      url: url_ki_annotations,
+                      type: 'annotation',
+                      displayMode: 'EXPANDED',
+                      height: 150,
+                      colorBy: 'alignment-type',
+                  },
+
               ],
       // Define global (across all tracks) "region of interest" set
 

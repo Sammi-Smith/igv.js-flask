@@ -1,11 +1,17 @@
-function initBrowser() {
+function initBrowser(parameter_for_sample_id) {
+
+  if (parameter_for_sample_id === undefined) {
+    parameter_for_sample_id = 'sample_id_not_provided';
+
+  }
+  console.log(`parameter_for_sample_id: ${parameter_for_sample_id}`);
 
   var div,
           options,
           browser;
 
   //define variables to specify file locations to pass to options
-  var sample_id = 'G213';
+  var sample_id = parameter_for_sample_id;
   var base_folder = '/static/data/examples/';
 
   //only required for reference: fastaURL (to view a local file instead of URL)

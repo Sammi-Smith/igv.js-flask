@@ -8,3 +8,5 @@ PUBLIC_DIR = "/static/data/public"
 ENABLE_CORS_REQUESTS = True
 
 DEBUG = False
+
+SAMPLE_ID = "G213"

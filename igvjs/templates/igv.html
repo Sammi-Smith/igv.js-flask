@@ -38,7 +38,7 @@
       if (uses_oauth) {
         initBrowserWithOAuth();
       } else {
-        initBrowser();
+        initBrowser({{ config['SAMPLE_ID']|tojson }});
       }
     });
 

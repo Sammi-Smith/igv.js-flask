@@ -31,6 +31,9 @@ function initBrowser(parameter_for_sample_id) {
   var preprocessing_annotations_prodigal = '/annotations/prodigal_annotate/coords.gff';
   var url_preprocessing_annotations_prodigal = `${base_folder}${sample_id}${preprocessing_annotations_prodigal}`;
 
+  var preprocessing_annotations_prokaryotic_mobile_element = '/annotations/mobile_element_prok/prok_mef.gff';
+  var url_preprocessing_annotations_prokaryotic_mobile_element = `${base_folder}${sample_id}${preprocessing_annotations_prokaryotic_mobile_element}`;
+
   var prefilter_alignments = '/alignments/engineered_align.bam';
   var url_prefilter_alignments = `${base_folder}${sample_id}${prefilter_alignments}`;
   var prefilter_alignments_index = '/alignments/engineered_align.bam.bai';
@@ -65,6 +68,14 @@ function initBrowser(parameter_for_sample_id) {
                   {
                       name: 'Preprocessing: Gene annotation, prodigal',
                       url: url_preprocessing_annotations_prodigal,
+                      type: 'annotation',
+                      displayMode: 'EXPANDED',
+                      autoHeight: true,
+                  },
+
+                  {
+                      name: 'Preprocessing: Prokaryotic mobile element annotation',
+                      url: url_preprocessing_annotations_prokaryotic_mobile_element,
                       type: 'annotation',
                       displayMode: 'EXPANDED',
                       autoHeight: true,

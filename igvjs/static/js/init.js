@@ -25,6 +25,12 @@ function initBrowser(parameter_for_sample_id) {
 
   //tracks
   //all below paths are relative to base_folder/sample_id
+  var preprocessing_annotations_prokka = '/annotations/prokka_annotate/prok_output/sample.gff';
+  var url_preprocessing_annotations_prokka = `${base_folder}${sample_id}${preprocessing_annotations_prokka}`;
+
+  var preprocessing_annotations_prodigal = '/annotations/prodigal_annotate/coords.gff';
+  var url_preprocessing_annotations_prodigal = `${base_folder}${sample_id}${preprocessing_annotations_prodigal}`;
+
   var prefilter_alignments = '/alignments/engineered_align.bam';
   var url_prefilter_alignments = `${base_folder}${sample_id}${prefilter_alignments}`;
   var prefilter_alignments_index = '/alignments/engineered_align.bam.bai';
@@ -48,12 +54,29 @@ function initBrowser(parameter_for_sample_id) {
       },               
       tracks: [
                   {
+                      name: 'Preprocessing: Gene annotation, prokka',
+                      url: url_preprocessing_annotations_prokka,
+                      type: 'annotation',
+                      displayMode: 'EXPANDED',
+                      autoHeight: true,
+                      colorBy: 'product',
+                  },
+
+                  {
+                      name: 'Preprocessing: Gene annotation, prodigal',
+                      url: url_preprocessing_annotations_prodigal,
+                      type: 'annotation',
+                      displayMode: 'EXPANDED',
+                      autoHeight: true,
+                  },
+
+                  {
                       name: 'Prefilter: Alignments/coverage of all positive reads to assembled genome',
                       url: url_prefilter_alignments,
                       indexURL: indexURL_prefilter_alignments_index,
                       type: 'alignment',
                       //visibilityWindow: 300000,
-                      height: 150
+                      autoHeight: true,
                   },
 
                   {
@@ -61,7 +84,7 @@ function initBrowser(parameter_for_sample_id) {
                       url: url_ki_annotations,
                       type: 'annotation',
                       displayMode: 'EXPANDED',
-                      height: 150,
+                      autoHeight: true,
                       colorBy: 'alignment-type',
                   },
 

@@ -121,8 +121,11 @@ WORKDIR /portal
 # The entrypoint sets the default program that is run inside the container
 # when the container is executed via `docker run`.
 #
-# TODO: We set this default to whatever script should be executed
-ENTRYPOINT [ "/bin/bash" ]
+# We set this default to execute `flask`
+# Set FLASK_APP variable so app can be run using `flask run` command
+ENV FLASK_APP=igvjs.py
+#ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "flask" ] #need to pass in "run --host=0.0.0.0" as parameters
 
 # CMD sets the default parameters for the entrypoint. These are overridden
 # by any extra arguments supplied by the user to `docker run`. If the 

@@ -23,7 +23,7 @@ setup(
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
     ],
     description          = "A user interface based on IGV",
     install_requires     = requirements,
@@ -36,6 +36,6 @@ setup(
     test_suite           = 'test',
     tests_require        = test_requirements,
     url                  = 'https://github.com/Sammi-Smith/igv.js-flask',
-    #version              = '0.0.1',
+    version              = '0.0.1',
     zip_safe             = False,
 )

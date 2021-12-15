@@ -1,3 +1,55 @@
+igv.js-flask
+
+# Overview
+
+A user interface based on IGV.
+
+
+# Prerequisites
+
+* [Docker](https://www.docker.com) *or* Python 3.7
+
+
+# Examples
+
+**TODO** provide some examples
+
+
+# Installation & running via Docker
+
+For portability across systems, ``igv.js-flask`` is
+Dockerized. To build the Docker container, open a terminal in the folder in
+which you have downloaded the source code, and run::
+
+```sh
+$ docker build -t igv.js-flask .
+```
+
+Then, you may execute ``igv.js-flask`` from any folder via::
+
+```sh
+# get help
+$ docker run -it --rm igv.js-flask --help
+
+# run the program. See --help for info on parameters
+$ docker run -p 5000:5000 -it --rm -v:$(pwd):/portal igv.js-flask run --host=0.0.0.0
+```
+
+**TODO** The script will put any output files in the current working directory, and read
+any input files with paths relative to the current working directory.
+
+
+If you want to manually explore inside the container, you do so at your own
+risk. You can open a ``bash`` terminal inside the container via::
+
+```sh
+$ docker run -it --rm --entrypoint bash igv.js-flask
+```
+
+
+# Installation & running in your environment (outside Docker)
+
+
 # IMPORTANT
 
 This repository is an example of an integration of igv.js with a Flask server.   It is not an active development project and not maintained.   Our efforts are focused on the [igv.js component itself](https://github.com/igvteam/igv.js).  For an example of a complete website integrating igv.js for use with any web server, including Flask,  see [igv-webapp](https://github.com/igvteam/igv-webapp).

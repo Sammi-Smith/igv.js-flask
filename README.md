@@ -4,16 +4,9 @@ igv.js-flask
 
 A user interface based on IGV.
 
-
 # Prerequisites
 
 * [Docker](https://www.docker.com) *or* Python 3.7
-
-
-# Examples
-
-**TODO** provide some examples
-
 
 # Installation & running via Docker
 
@@ -35,9 +28,19 @@ $ docker run -it --rm igv.js-flask --help
 $ docker run -p 5000:5000 -it --rm -v:$(pwd):/portal igv.js-flask run --host=0.0.0.0
 ```
 
+Notes: 
+* The ``-p 5000:5000`` option for ``docker run`` is required to publish the container's port to the host. 
+* The ``run --host=0.0.0.0`` options passed to the ``flask`` entrypoint are required to make the server externally visible.
+
+Then, the user can view the IGV browser, preloaded with all files, by pointing a web browser to ``http://172.17.0.2:5000/`` or whatever URL is specified in the portion of the output of the above command in the section that says:
+```sh
+* Running on http://<URL_specified_here> (Press CTRL+C to quit)
+```
+
 **TODO** The script will put any output files in the current working directory, and read
 any input files with paths relative to the current working directory.
 
+Currently, sample input files for dataset ``G213`` are being pulled from this repository itself from the folder ``igv.js-flask/igvjs/static/data/examples`` and no output files are generated.
 
 If you want to manually explore inside the container, you do so at your own
 risk. You can open a ``bash`` terminal inside the container via::

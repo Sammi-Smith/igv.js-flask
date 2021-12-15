@@ -16,6 +16,7 @@ function initBrowser(parameter_for_sample_id) {
 
   //only required for reference: fastaURL (to view a local file instead of URL)
   var server_and_port = 'http://localhost:5000';
+  //var server_and_port = 'http://127.0.0.1:5000';
 
   //reference
   var preprocessing_genome_assembly = '/assembly/assembled-contigs.fa';
